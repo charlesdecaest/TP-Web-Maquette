@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinner</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="JS/index.js"></script>
+    <script src="https://kit.fontawesome.com/374c1d6b06.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
+        
+</head>
+<body>
+    <header id="home" class="container-fluid no-padding">
+        <div class="row align-items-center h-100 no-padding">
+            <div class="col-4">
+                <div id="logo">
+                    <a href="index_fr.html"><img src="assets/Quick&Easy Chief.png" alt="logo"></a>
+                </div>
+            </div>
+            <div class="col-4 text-center">
+                <div class="titre">
+                    <h1>Quick & Easy</h1>
+                    <h4>Recette de cuisine</h4>
+                </div>
+            </div>
+            <div class="col-2">
+                <form class="rechercher search-button-container" method="GET" action="">
+                    <input type="text" id="zonerecherche" placeholder="Rechercher">
+                    <button type="submit" id="search-button"><i id="search-icon" class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-2">
+                <div>
+                    <a href="dinner_fr.html"><img class="flag" src="assets/france.svg" alt="Français"></a>
+                    <a href="dinner_en.html"><img class="flag" src="assets/uk.svg" alt="English"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div> <!-- Colonne vide pour l'espace -->
+            <div class="col-2 text-center meal-link">
+                <a href="breakfast_fr.html"><h2>Petit Déjeuner</h2></a>
+            </div>
+            <div class="col-2 text-center meal-link">
+                <a href="lunch_fr.html"><h2>Déjeuner</h2></a>
+            </div>
+            <div class="col-2 text-center meal-link">
+                <a href="dinner_fr.html" id="active"><h2>Dînée</h2></a>
+            </div>
+            <div class="col-3"></div> <!-- Colonne vide pour l'espace -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <button class="col-1 text-center border" id="decrement">
+                <span>-</span>
+            </button>
+            <div class="col-1 text-center border">
+                <span id="count">5</span>
+                <i class="fa-solid fa-circle-user logo"></i> <!-- Icône de l'utilisateur -->
+            </div>
+            <button class="col-1 text-center border" id="increment">
+                <span>+</span>
+            </button>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col text-center position-relative">
+            <div class="left-content">
+                <h2>Ingrédients</h2>
+                <ul>
+                    <li>Élément 1</li>
+                    <li>Élément 2</li>
+                    <li>Élément 3</li>
+                </ul>
+            </div>
+            <img src="assets/dinner.png" alt="Plat" class="center">
+            <i class="fa-solid fa-arrow-left position-absolute left-arrow"></i> <!-- Flèche gauche -->
+            <i class="fa-solid fa-arrow-right position-absolute right-arrow"></i> <!-- Flèche droite -->
+            <div class="right-content">
+                <h2>Étapes</h2>
+                <ul>
+                    <li>Élément 1</li>
+                    <li>Élément 2</li>
+                    <li>Élément 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
