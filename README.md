@@ -1,2 +1,1 @@
-# TP-Web-Maquette
- 
+# Quick & Easy 
