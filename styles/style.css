@@ -19,8 +19,19 @@
     max-width: 100%;
 }
 
-body{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 10vh;
 }
 
 #home {
@@ -104,7 +115,7 @@ body{
     align-items: center; /* Centre les éléments verticalement */
 }
 .row .col img {
-    margin-top: calc(100vh - 60vh - 325px); /* Ajustez cette valeur selon vos besoins */
+    margin-top: calc(100vh - 62vh - 325px); /* Ajustez cette valeur selon vos besoins */
     height: 60vh; /* Ajustez cette valeur selon vos besoins */
     width: auto;
 }
@@ -192,4 +203,29 @@ ul li:before {
 }
 #active {
     color: var(--green); /* Change la couleur du lien actif en rouge */
+}
+.lien{
+    color: var(--navy-blue);
+    text-decoration: none;
+    width: 50%;
+    vertical-align: middle;
+}
+footer {
+    background-color: #ffe7c6;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px 4px #d9b8a0;; /* Ajoute une ombre en haut */
+}
+footer p {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+}
+.lien img {
+    height: 5vh;
+    width: auto;
 }
