@@ -1,0 +1,207 @@
+@font-face {
+    font-family: Playfair;
+    src: url(../assets/static/PlayfairDisplay-Regular.ttf);
+}
+
+:root{
+    --cream : #FFDBAA;
+    --navy-blue :  #13284B;
+    --white : #FFFFFF;
+    --green : #96C291;
+    font-family: Playfair;
+}
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: Playfair;
+    max-width: 100%;
+}
+body {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh; /* Hauteur de la fenêtre de visualisation */
+    overflow: auto;
+}
+
+#home {
+    height: 100px; /* Ajustez cette valeur selon vos besoins */
+    background-color: var(--cream);
+    box-shadow: 0 4px 2px -2px rgba(255, 219, 170, 0.5); /* Ajoute une ombre en bas */
+}
+
+    #logo img {
+    height: 95px; /* Le logo prendra toute la hauteur disponible */
+    width: auto;
+    }
+        .titre h1, .titre h4 {
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .rechercher {
+    position: relative;
+    float: right;
+}
+
+.rechercher input {
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 30px 0 45px; /* Augmentez le padding à gauche pour faire de la place pour l'icône */
+    background-color: #f4f4f4;
+}
+
+.rechercher button {
+    position: absolute;
+    left: 10px; /* Positionnez le bouton à gauche */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+}
+
+.rechercher i {
+    color: #000;
+}
+.flag {
+    height: 90px;
+    width: auto;
+}
+
+.container .row .meal-link a {
+    display: block;
+    padding: 20px;
+    color: #ff0000;
+    text-decoration: none;
+    position: relative;
+}
+.container .row .meal-link a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 18px;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.container .row .meal-link a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+#active {
+    color: var(--green); /* Change la couleur du lien actif en rouge */
+}
+.container .row .meal-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px; /* Ajustez cette valeur selon vos besoins */
+}
+
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Centre le contenu verticalement */
+    height: 100vh; /* Ajustez "tailleDuHeader" à la hauteur de votre header */
+}
+
+.ingredient-container {
+    display: flex;
+    flex-direction: row; /* Change l'orientation de flexbox en horizontal */
+}
+
+.vertical-bar {
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    margin: 0 1rem;
+}
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte horizontalement */
+    height: calc(100vh - 100px);
+    width: 100%;
+}
+.centered-image {
+    margin: auto 0;
+    width: 70%;
+    height: auto; /* Ajustez la hauteur de l'image automatiquement pour conserver les proportions */
+    object-fit: cover;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+.image-container h2{
+    font-size: 2em;
+    margin-top: 2em;
+    padding: 0;
+    color: var(--navy-blue);
+}
+.horizontal-bar {
+    border-bottom: 2px solid black;
+    width: fit-content; /* Changez cette ligne */
+    position: relative;
+}
+
+.rotated-text {
+    transform: rotate(90deg) translate(-50%, -50%);
+    transform-origin: left top;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-size: 3em;
+    height: 150%;
+    margin: 0;
+    padding-top: 100px;
+    margin-left: 50px;
+    color: #ff0000;
+}
+ul {
+    list-style: none; /* Supprime les puces */
+    max-width: fit-content;
+}
+
+ul li {
+    color: var(--green);
+    font-size: 1.5em;
+    max-width: 200px;
+}
+
+ul li::before {
+    content: "•"; /* Ajoute une puce */
+    color: black; /* Définit la couleur de la puce */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.no-padding {
+padding: 0;
+margin: 0;
+}
+.container {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+.centered-content {
+    margin: auto;
+    width: 80%; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+}
+.top-margin {
+    position: relative;
+    top: -70px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+    color: var(--navy-blue);
+    margin-bottom: 2em;
+}
