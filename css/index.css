@@ -21,16 +21,16 @@
     font-family: Playfair;
 }
 body {
-    overflow: hidden;
+    font-size: 1rem;
 }
 #home {
-    height: 100px; /* Ajustez cette valeur selon vos besoins */
+    height: 11.8vh; /* Ajustez cette valeur selon vos besoins */
     background-color: var(--cream);
     box-shadow: 0 4px 2px -2px rgba(255, 219, 170, 0.5); /* Ajoute une ombre en bas */
 }
 
     #logo img {
-    height: 95px; /* Le logo prendra toute la hauteur disponible */
+    height: 11.5vh; /* Le logo prendra toute la hauteur disponible */
     width: auto;
     }
         .titre h1, .titre h4 {
@@ -44,8 +44,8 @@ body {
 }
 
 .rechercher input {
-    width: 200px;
-    height: 30px;
+    width: 22vh;
+    height: 3.5vh;
     border: none;
     border-radius: 15px;
     padding: 0 30px 0 45px; /* Augmentez le padding à gauche pour faire de la place pour l'icône */
@@ -65,21 +65,29 @@ body {
     color: #000;
 }
 .flag {
-    height: 90px;
+    height: 10vh;
     width: auto;
+    margin: 0 10px;
 }
+.flag-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ajoutez cette ligne */
+}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
+    width: 2rem; /* Modifié de px à rem */
+    height: 2rem; /* Modifié de px à rem */
     cursor: pointer;
     background-color: transparent;
     border-radius: 0;
     position: relative;
     transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
-    z-index: 1; /* Ajouté pour que le menu hamburger apparaisse au-dessus de l'arrière-plan */
+    z-index: 1;
 }
 
 .hamburger-menu::before {
@@ -214,42 +222,140 @@ footer {
 }
 
 .footer-content {
-    display: flex; /* Utilise Flexbox pour positionner les éléments */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Centre les éléments verticalement */
-    gap: 20px; /* Ajoute un espace entre les éléments */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Utilisez des unités relatives */
 }
 
 .footer-title {
-    margin: 0; /* Supprime les marges par défaut du titre */
+    margin: 0;
+    font-size: 1.2rem; /* Taille de police optimisée */
 }
+
+.quote {
+    width: 90%;
+    margin: 50px auto;
+    font-size: 2em;
+    text-align: center;
+    font-family: Playfair Italic;
+}
+
+.divider {
+    width: 40%;
+    margin: auto;
+    height: 1px;
+    border: none;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.card-img {
+    max-width: 100%;
+    width: auto;
+    height: 50vh;
+    object-fit: cover;
+}
+
+/* Styles pour les écrans de taille moyenne (tablette) */
 @media (max-width: 768px) {
-    #home {
-        height: 80px;
+    body {
+        font-size: 0.9rem; /* Réduire la taille de la police pour les tablettes */
+    }
+    .hamburger-menu span {
+        width: 1.5rem;
     }
 
-    #logo img {
-        height: 75px;
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem; /* Utilisez des unités relatives */
     }
 
-    .dropdown-menu {
-        min-width: 120px;
-        padding: 10px 14px;
+    .footer-title {
+        font-size: 1rem; /* Taille de police optimisée */
     }
+
+.quote {
+    font-size: 1.5em; /* Réduire la taille de la police pour les tablettes */
+}
+
+.card-container {
+    flex-direction: column; /* Changer l'orientation des cartes */
+}
+
+.card-img {
+    width: auto;
+    height: 30vh; /* Réduire la hauteur des images pour les tablettes */
+}
+#home {
+    height: 15vh; /* Augmenter la hauteur pour les tablettes */
+}
+
+#logo img {
+    height: 14.7vh; /* Augmenter la hauteur du logo pour les tablettes */
+}
 }
 
 /* Styles pour les petits écrans (mobile) */
 @media (max-width: 480px) {
-    #home {
-        height: 60px;
+    body {
+        font-size: 0.8rem; /* Réduire encore plus la taille de la police pour les mobiles */
+    }
+    .hamburger-menu span {
+        width: 1rem;
     }
 
-    #logo img {
-        height: 55px;
+    .footer-content {
+        gap: 0.5rem; /* Utilisez des unités relatives */
     }
 
-    .dropdown-menu {
-        min-width: 100px;
-        padding: 8px 12px;
+    .footer-title {
+        font-size: 0.8rem; /* Taille de police optimisée */
     }
+
+.quote {
+    font-size: 1.2em; /* Réduire encore plus la taille de la police pour les mobiles */
+}
+
+.card-img {
+    width: auto;
+    height: 20vh; /* Réduire encore plus la hauteur des images pour les mobiles */
+}
+.quote {
+    font-size: 1.5em; /* Réduire la taille de la police pour les tablettes */
+}
+
+.card-container {
+    flex-direction: column; /* Changer l'orientation des cartes */
+}
+
+.card-img {
+    height: 30vh; /* Réduire la hauteur des images pour les tablettes */
+}
+#home {
+    height: 20vh; /* Augmenter encore plus la hauteur pour les mobiles */
+}
+
+#logo img {
+    height: 19.7vh; /* Augmenter encore plus la hauteur du logo pour les mobiles */
+}
 }
